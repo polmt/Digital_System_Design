@@ -11,7 +11,7 @@ entity FSM is
             Y : out STD_LOGIC );
 end FSM;
 
---Gray
+-- Gray
 
 architecture Behavioral of FSM is
   
