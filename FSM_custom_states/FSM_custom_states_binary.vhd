@@ -11,9 +11,10 @@ entity FSM is
             Y : out STD_LOGIC );
 end FSM;
 
---Binary
+-- Binary
 
 architecture Behavioral of FSM is
+     
     type FSM_states is (S0, S1, S2, S3, S4);
     signal current_state, next_state : FSM_states;
 
