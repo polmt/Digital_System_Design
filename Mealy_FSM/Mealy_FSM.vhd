@@ -10,22 +10,30 @@ entity Mealy_FSM is
 end Mealy_FSM;
 
 architecture Behavioral of Mealy_FSM is
+     
     type state_type is (S0, S1, S2, S3, S4, S5);
     signal current_state, next_state : state_type;
+
 begin
 
 process(CLK, RESET)
+     
 begin
+     
     if (RESET = '1') then
         current_state <= S0;
     elsif (CLK'event and CLK = '1') then
         current_state <= next_state;
     end if;
+         
 end process;
 
 process(current_state, X)
+         
 begin
+     
     case current_state is
+         
         when S0 =>
             if (X = '0') then
                 next_state <= S0;
@@ -77,6 +85,9 @@ begin
         when others =>
             next_state <= S0;
             Y <= '0';
+
     end case;
+         
 end process;
+         
 end Behavioral;
