@@ -1,5 +1,5 @@
---    b) Dataflow architecture using
---       selected statements and 'resize'
+--  b) Dataflow architecture using
+--     selected statements and 'resize'
 
 library IEEE;                                          
 use IEEE.STD_LOGIC_1164.ALL;                           
